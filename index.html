@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="he">
+<head>
+  <meta charset="UTF-8">
+  <title>Ko Cosmetics - הזמנת תור</title>
+  <style>
+    body {
+      direction: rtl;
+      font-family: 'Assistant', sans-serif;
+      background-color: #f9f9f9;
+      padding: 30px;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 12px rgba(0,0,0,0.1);
+    }
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      box-sizing: border-box;
+    }
+    button {
+      background-color: #a3c49a;
+      color: white;
+      font-size: 16px;
+      cursor: pointer;
+      border: none;
+    }
+    button:hover {
+      background-color: #90b38a;
+    }
+  </style>
+</head>
+<body>
+
+<form action="https://formspree.io/f/mnndznoy" method="POST">
+  <h2 style="text-align: center;">הזמנת תור</h2>
+
+  <label for="name">שם מלא:</label>
+  <input type="text" id="name" name="שם מלא" required>
+
+  <label for="phone">מספר טלפון:</label>
+  <input type="tel" id="phone" name="טלפון" pattern="^05\d{8}$" required placeholder="05X-XXXXXXX">
+
+  <label for="treatment">בחרי טיפול:</label>
+  <select id="treatment" name="טיפול" required>
+    <option value="">-- בחרי טיפול --</option>
+    <option>ניקוי פנים עמוק</option>
+    <option>טיפול אנטי-אייג'ינג</option>
+    <option>טיפול באקנה</option>
+    <option>איזון עור שמן</option>
+  </select>
+
+  <label for="date">תאריך:</label>
+  <input type="date" id="date" name="תאריך" required>
+
+  <label for="time">שעה:</label>
+  <input type="time" id="time" name="שעה" required>
+
+  <button type="submit">הזמיני עכשיו</button>
+</form>
+
+</body>
+</html>
+
